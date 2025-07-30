@@ -1,215 +1,279 @@
 * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
 
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: arial, sans-serif;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 15px 20px;
+  flex-shrink: 0;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: black;
+  margin-left: 15px;
+  font-size: 13px;
+}
+
+.nav-item:hover {
+  text-decoration: underline;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  max-width: 100%;
+  width: 100%;
+}
   
+.main img {
+  margin-bottom: 20px;
+  max-width: 272px;
+  width: 100%;
+  height: auto;
+}
+
+.input-area {
+  margin: 20px 0;
+  position: relative;
+  width: 100%;
+  max-width: 584px;
+  display: flex;
+  align-items: center;
+}
+
+.input-box {
+  width: 100%;
+  height: 46px;
+  border-radius: 24px;
+  border: 1px solid #dfe1e5;
+  padding: 0 45px;
+  outline: none;
+  font-size: 16px;
+}
+
+.input-box:focus {
+  border-color: #4285f4;
+  box-shadow: 0 2px 5px 1px rgba(64,60,67,.16);
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+  color: #9aa0a6;
+  z-index: 1;
+}
+
+.mic-icon {
+  position: absolute;
+  right: 15px;
+  color: #9aa0a6;
+  z-index: 1;
+  cursor: pointer;
+}
+  
+.button-top {
+  margin: 18px 0;
+  display: flex;
+  gap: 11px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.button-style {
+  height: 36px;
+  background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  color: #3c4043;
+  font-family: arial, sans-serif;
+  padding: 0 16px;
+  cursor: pointer;
+  font-size: 14px;
+  min-width: 54px;
+}
+
+.button-style:hover {
+  box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
+  background-color: #f8f9fa;
+  border: 1px solid #dadce0;
+  color: #202124;
+}
+
+.main > div:last-child {
+  margin-top: 24px;
+  font-size: 13px;
+}
+
+.main > div:last-child a {
+  color: #1a0dab;
+  margin: 0 3px;
+  text-decoration: none;
+}
+
+.main > div:last-child a:hover {
+  text-decoration: underline;
+}
+  
+.footer {
+  background: #f2f2f2;
+  width: 100%;
+  margin-top: auto;
+  flex-shrink: 0;
+}
+
+.first-line {
+  padding: 15px 30px;
+  border-bottom: 1px solid #dadce0;
+  font-size: 15px;
+  color: rgba(0,0,0,.54);
+}
+
+.second-line {
+  padding: 15px 30px;
+  font-size: 15px;
+  color: rgba(0,0,0,.54);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.second-line a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, .54); 
+  transition: color 0.3s;
+  margin-right: 10px;
+}
+
+.second-line a:hover {
+  color: rgba(0, 0, 0, .8); 
+}
+
+.second-line-second {
+  display: flex;
+  gap: 10px;
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
   .navbar {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 20px;
+    padding: 10px 15px;
   }
   
   .nav-item {
-    text-decoration: none;
-    color: black;
-    margin-left: 15px;
-  }
-  
-  .nav-item:hover {
-    text-decoration: underline;
+    font-size: 12px;
+    margin-left: 10px;
   }
   
   .main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+    padding: 15px;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    margin-top: -150px;
+  }
+  
+  .main img {
+    max-width: 200px;
+    margin-bottom: 15px;
   }
   
   .input-area {
-    margin-top: 20px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    max-width: 95%;
+    margin: 15px 0;
   }
   
   .input-box {
-    width: 100%;
-    max-width: 584px;
-    height: 46px;
-    border-radius: 24px;
-    border: 1px solid #dfe1e5;
-    padding-left: 40px;
-    padding-right: 40px;
-    outline: none;
-  }
-  
-  .input-box:focus {
-    border-color: #4285f4;
-    box-shadow: 0 2px 5px 1px rgba(64,60,67,.16);
-  }
-  
-  .search-icon {
-    position: absolute;
-    left: 15px;
-    color: #9aa0a6;
-    z-index: 1;
-  }
-  
-  .mic-icon {
-    position: absolute;
-    right: 15px;
-    color: #9aa0a6;
-    z-index: 1;
-    cursor: pointer;
+    height: 44px;
+    font-size: 16px;
   }
   
   .button-top {
-    padding-top: 18px;
-    display: flex;
-    gap: 11px;
-    justify-content: center;
-    flex-wrap: wrap;
+    margin: 15px 0;
   }
   
   .button-style {
-    height: 36px;
-    background-color: #f8f9fa;
-    border: 1px solid #f8f9fa;
-    border-radius: 4px;
-    color: #3c4043;
-    font-family: arial, sans-serif;
-    padding: 0 16px;
-    cursor: pointer;
-    font-size: 14px;
+    font-size: 13px;
+    padding: 0 12px;
+    height: 34px;
   }
   
-  .button-style:hover{
-    box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
-    background-color: #f8f9fa;
-    border: 1px solid #dadce0;
-    color: #202124;
-  }
-  
-  .footer {
-    background: #f2f2f2;
-    width: 100%;
-    margin-top: auto;
+  .main > div:last-child {
+    margin-top: 20px;
+    font-size: 12px;
   }
   
   .first-line {
-    padding: 15px 30px;
-    border-bottom: 1px solid #dadce0;
-    font-size: 15px;
-    color: rgba(0,0,0,.54);
-    text-align: left;
+    padding: 12px 15px;
+    font-size: 14px;
   }
   
   .second-line {
-    padding: 15px 30px;
-    font-size: 15px;
-    color: rgba(0,0,0,.54);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-
-  .second-line a {
-    text-decoration: none;
-    color: rgba(0, 0, 0, .54); 
-    transition: color 0.3s;
-    margin-right: 10px;
-  }
-
-  .second-line a:hover {
-    color: rgba(0, 0, 0, .8); 
+    padding: 12px 15px;
+    font-size: 13px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
   }
   
   .second-line-second {
-    display: flex;
-    gap: 10px;
+    margin-top: 0;
   }
+}
 
-  /* 모바일 반응형 */
-  @media (max-width: 768px) {
-    .navbar {
-      padding: 15px;
-    }
-    
-    .main {
-      padding: 15px;
-      margin-top: -100px;
-    }
-    
-    .input-area {
-      width: 100%;
-      max-width: 90%;
-    }
-    
-    .input-box {
-      min-width: 280px;
-    }
-    
-    .button-top {
-      padding-top: 15px;
-    }
-    
-    .button-style {
-      font-size: 13px;
-      padding: 0 12px;
-    }
-    
-    .footer {
-      position: relative;
-    }
-    
-    .first-line {
-      padding: 12px 20px;
-      font-size: 14px;
-    }
-    
-    .second-line {
-      padding: 12px 20px;
-      font-size: 14px;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 10px;
-    }
-    
-    .second-line-second {
-      margin-top: 5px;
-    }
+@media (max-width: 480px) {
+  .navbar {
+    padding: 8px 12px;
   }
-
-  @media (max-width: 480px) {
-    .main {
-      margin-top: -50px;
-    }
-    
-    .input-box {
-      min-width: 250px;
-      height: 42px;
-    }
-    
-    .button-style {
-      height: 34px;
-      font-size: 12px;
-      padding: 0 10px;
-    }
+  
+  .main {
+    padding: 10px;
   }
+  
+  .main img {
+    max-width: 150px;
+    margin-bottom: 12px;
+  }
+  
+  .input-area {
+    max-width: 98%;
+    margin: 12px 0;
+  }
+  
+  .input-box {
+    height: 42px;
+    font-size: 16px;
+    padding: 0 40px;
+  }
+  
+  .button-top {
+    margin: 12px 0;
+    gap: 8px;
+  }
+  
+  .button-style {
+    font-size: 12px;
+    padding: 0 10px;
+    height: 32px;
+  }
+  
+  .main > div:last-child {
+    margin-top: 16px;
+    font-size: 11px;
+  }
+}
   
