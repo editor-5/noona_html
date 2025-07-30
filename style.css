@@ -1,50 +1,89 @@
-body {
-    display: contents;
+* {
+    box-sizing: border-box;
   }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
   .navbar {
-    float: right;
-    margin: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
   }
+  
   .nav-item {
     text-decoration: none;
     color: black;
-    margin-right: 15px;
+    margin-left: 15px;
   }
+  
   .nav-item:hover {
     text-decoration: underline;
   }
   
   .main {
-    margin-top: 300px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    padding: 20px;
+    margin-top: -150px;
   }
+  
   .input-area {
-    margin- top:20px;
+    margin-top: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .input-box {
-    width: 584px;
+    width: 100%;
+    max-width: 584px;
     height: 46px;
     border-radius: 24px;
     border: 1px solid #dfe1e5;
     padding-left: 40px;
     padding-right: 40px;
+    outline: none;
+  }
+  
+  .input-box:focus {
+    border-color: #4285f4;
+    box-shadow: 0 2px 5px 1px rgba(64,60,67,.16);
   }
   
   .search-icon {
-    position: relative;
-    left: 40px;
+    position: absolute;
+    left: 15px;
     color: #9aa0a6;
+    z-index: 1;
   }
   
   .mic-icon {
-    position: relative;
-    left: -40px;
+    position: absolute;
+    right: 15px;
     color: #9aa0a6;
+    z-index: 1;
+    cursor: pointer;
   }
   
   .button-top {
     padding-top: 18px;
+    display: flex;
+    gap: 11px;
+    justify-content: center;
+    flex-wrap: wrap;
   }
   
   .button-style {
@@ -54,9 +93,11 @@ body {
     border-radius: 4px;
     color: #3c4043;
     font-family: arial, sans-serif;
-    padding-right: 0 16px;
-    margin: 11px 4px;
+    padding: 0 16px;
+    cursor: pointer;
+    font-size: 14px;
   }
+  
   .button-style:hover{
     box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
     background-color: #f8f9fa;
@@ -65,10 +106,9 @@ body {
   }
   
   .footer {
-    position: absolute;
-    bottom: 0px;
     background: #f2f2f2;
     width: 100%;
+    margin-top: auto;
   }
   
   .first-line {
@@ -77,14 +117,16 @@ body {
     font-size: 15px;
     color: rgba(0,0,0,.54);
     text-align: left;
-    
   }
   
   .second-line {
     padding: 15px 30px;
     font-size: 15px;
     color: rgba(0,0,0,.54);
-    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
   }
 
   .second-line a {
@@ -99,6 +141,75 @@ body {
   }
   
   .second-line-second {
-    float: right;
+    display: flex;
+    gap: 10px;
+  }
+
+  /* 모바일 반응형 */
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 15px;
+    }
+    
+    .main {
+      padding: 15px;
+      margin-top: -100px;
+    }
+    
+    .input-area {
+      width: 100%;
+      max-width: 90%;
+    }
+    
+    .input-box {
+      min-width: 280px;
+    }
+    
+    .button-top {
+      padding-top: 15px;
+    }
+    
+    .button-style {
+      font-size: 13px;
+      padding: 0 12px;
+    }
+    
+    .footer {
+      position: relative;
+    }
+    
+    .first-line {
+      padding: 12px 20px;
+      font-size: 14px;
+    }
+    
+    .second-line {
+      padding: 12px 20px;
+      font-size: 14px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    
+    .second-line-second {
+      margin-top: 5px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .main {
+      margin-top: -50px;
+    }
+    
+    .input-box {
+      min-width: 250px;
+      height: 42px;
+    }
+    
+    .button-style {
+      height: 34px;
+      font-size: 12px;
+      padding: 0 10px;
+    }
   }
   
