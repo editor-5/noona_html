@@ -1,0 +1,295 @@
+body {
+  margin: 0px;
+  font-family: spotify-circular, Helvetica, Arial, sans-serif;
+  color: white;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  color: #1ed760;
+}
+nav {
+  height: 80px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.nav-item {
+  padding: 28px 17px;
+  font-weight: 700;
+}
+main {
+  height: 968px;
+  background-color: rgb(41, 65, 171);
+  background-image: url(https://www-growth.scdn.co/static/home/bursts.svg);
+  background-size: 175%;
+  background-position: 46% 4%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.headline {
+  font-size: 146px;
+  line-height: 166px;
+  color: #1ed760;
+  font-weight: 900;
+  position: relative;
+  left: 225px;
+  padding-bottom: 40px;
+}
+.headline-first {
+  position: relative;
+  left: -2.5em;
+}
+.sub-headline {
+  color: #1ed760;
+  font-size: 18px;
+  line-height: 24px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+.button-area {
+  text-align: center;
+}
+.button-style {
+  padding: 14px 32px;
+  background-color: #1ed760;
+  border-radius: 500px;
+  font-size: inherit;
+  color: #2941ab;
+  font-weight: 700;
+  border: none;
+}
+.button-style:hover {
+  transform: scale(1.07);
+  background-color: #2de26d;
+}
+footer {
+  height: 530px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+.container {
+  max-width: 1170px;
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+.footer-menu {
+  display: flex;
+  justify-content: space-between;
+  height: 346px;
+}
+.first-box {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+.second-box {
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+}
+.footer-menu-item {
+  padding-bottom: 15px;
+  padding-top: 3px;
+  font-size: 16px;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px;
+}
+.sub-title {
+  color: #919496;
+  font-weight: 900;
+  margin: 20px 0px;
+}
+.icon-box {
+  width: 54px;
+  height: 54px;
+  background-color: #222322;
+  border-radius: 50%;
+  margin-right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon {
+  font-size: 24px;
+}
+.icon:hover {
+  color: #2de26d;
+}
+.first-line {
+  color: #919496;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 12px;
+}
+.second-line {
+  color: #919496;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+.second-line-item {
+  margin-right: 24px;
+  color: #919496;
+}
+
+/* 모바일 반응형 스타일 */
+@media (max-width: 768px) {
+  /* 네비게이션 모바일 스타일 */
+  nav {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+  
+  nav > div:first-child {
+    margin-bottom: 10px;
+  }
+  
+  nav > div:first-child img {
+    width: 100px !important;
+  }
+  
+  nav > div:last-child {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+  }
+  
+  .nav-item {
+    padding: 10px 8px;
+    font-size: 14px;
+  }
+  
+  /* 메인 콘텐츠 모바일 스타일 */
+  main {
+    height: auto;
+    min-height: 80vh;
+    background-size: 250%;
+    background-position: center;
+    padding: 40px 20px;
+  }
+  
+  .main-container {
+    text-align: center;
+  }
+  
+  .headline {
+    font-size: 48px !important;
+    line-height: 54px !important;
+    left: 0 !important;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  
+  .headline-first {
+    left: 0 !important;
+    position: static;
+  }
+  
+  .sub-headline {
+    font-size: 16px;
+    line-height: 22px;
+    padding: 0 20px 30px;
+  }
+  
+  .button-style {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+  
+  /* 푸터 모바일 스타일 */
+  footer {
+    height: auto;
+    min-height: 400px;
+  }
+  
+  .container {
+    padding: 40px 20px;
+  }
+  
+  .footer-menu {
+    flex-direction: column;
+    height: auto;
+    gap: 30px;
+  }
+  
+  .first-box {
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .first-box > div:first-child {
+    text-align: center;
+  }
+  
+  .first-box > div:first-child img {
+    width: 100px !important;
+  }
+  
+  .column {
+    padding: 0;
+    text-align: center;
+  }
+  
+  .second-box {
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .first-line {
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .second-line {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .second-line > div:first-child {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .second-line-item {
+    margin-right: 0;
+    font-size: 12px;
+  }
+}
+
+/* 태블릿 반응형 스타일 */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .headline {
+    font-size: 100px !important;
+    line-height: 110px !important;
+    left: 100px !important;
+  }
+  
+  .headline-first {
+    left: -1.8em !important;
+  }
+  
+  main {
+    background-size: 200%;
+  }
+  
+  .container {
+    padding: 60px 40px;
+  }
+}
