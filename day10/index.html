@@ -99,7 +99,7 @@
               <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
               <circle cx="12" cy="13" r="4"></circle>
             </svg>
-            <strong>Album</strong>
+            <strong>프로야구일정</strong>
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -113,9 +113,10 @@
       <section class="py-5 text-center container">
         <div class="row py-lg-5">
           <div class="col-lg-6 col-md-8 mx-auto">
-            <h1 class="fw-light">Mrs. Park's husband's site</h1>
-            <p class="lead text-body-secondary">
-              Ask Mrs. Park and make a reservation
+            <h1 class="fw-light">프로야구일정</h1>
+            <p class="text-primary text-center fs-6 mb-3">
+              45일 이내 KBO 일정 중 롯데 서울경기만 표시됩니다<br>조건을 다르게 선정할려면 관리자에게 의뢰해주세요
+              <br>KBO에서 일정확인할수 있는날만 보여집니다</br>
             </p>
             
           </div>
@@ -124,54 +125,29 @@
 
       <div class="album py-5 bg-body-tertiary">
         <div class="container">
-          <!-- 기존 구장 카드 삭제됨 -->
-          <!-- 각 구장별 홈페이지 버튼으로 대체 -->
-          <!-- 야구 정보 사이트 카드 3개 -->
-          <!-- 롯데 자이언츠 서울경기 카드 -->
-          <div class="row row-cols-1 row-cols-md-1 g-4 justify-content-center mt-4">
-            <div class="col">
-              <div class="card shadow-sm h-100 border-danger">
-                <div class="card-body">
-                  <h5 class="card-title text-danger">롯데 자이언츠 서울경기 일정</h5>
-                  <ul class="list-group mb-3" id="lotte-seoul-list">
+          <!-- 2개 카드 1줄로 배열 -->
+          <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center mt-4">
+            <!-- 롯데 자이언츠 서울경기 카드 -->
+            <div class="col d-flex">
+              <div class="card shadow-sm h-100 border-danger d-flex flex-column flex-grow-1 w-100">
+                <div class="card-body d-flex flex-column flex-grow-1">
+                  <h5 class="card-title text-danger">롯데자이언츠 서울경기만</h5>
+                  <ul class="list-group mb-3 flex-grow-1" id="lotte-seoul-list">
                     <!-- JS로 일정 자동 출력 -->
                   </ul>
-                  <a href="https://www.giantsclub.com/html/?pcode=257" target="_blank" class="btn btn-danger w-100">롯데 전체 일정 보기</a>
+                  <a href="https://www.giantsclub.com/html/?pcode=257" target="_blank" class="btn btn-danger w-100 mt-auto">롯데 전체 일정 보기</a>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center mt-4">
-            <!-- KBO 공식 홈페이지 -->
-            <div class="col">
-              <div class="card shadow-sm h-100">
-                <div class="card-body">
+            <!-- KBO 공식 홈페이지 카드 -->
+            <div class="col d-flex">
+              <div class="card shadow-sm h-100 d-flex flex-column flex-grow-1 w-100">
+                <img src="https://cdn.stnsports.co.kr/news/photo/202210/155544_126641_4647.png" alt="KBO 로고" class="card-img-top p-3" style="object-fit:contain; height:160px; width:auto; max-width:100%; margin:auto;" />
+                <div class="card-body d-flex flex-column flex-grow-1">
                   <h5 class="card-title">KBO 공식 홈페이지</h5>
                   <h6 class="card-subtitle mb-2 text-muted">KBO Official</h6>
                   <p class="card-text">공식 일정·결과·하이라이트 및 중계 안내</p>
-                  <a href="https://www.koreabaseball.com/Schedule/Schedule.aspx" target="_blank" class="btn btn-primary w-100">사이트 바로가기</a>
-                </div>
-              </div>
-            </div>
-            <!-- MyKBO Stats -->
-            <div class="col">
-              <div class="card shadow-sm h-100">
-                <div class="card-body">
-                  <h5 class="card-title">MyKBO Stats</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">MyKBO Stats</h6>
-                  <p class="card-text">실시간 경기 데이터, 오늘의 선발/상세 통계 (비공식)</p>
-                  <a href="https://mykbostats.com" target="_blank" class="btn btn-primary w-100">사이트 바로가기</a>
-                </div>
-              </div>
-            </div>
-            <!-- Flashscore -->
-            <div class="col">
-              <div class="card shadow-sm h-100">
-                <div class="card-body">
-                  <h5 class="card-title">Flashscore (플래시스코어)</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Flashscore</h6>
-                  <p class="card-text">실시간 스코어/다종 스포츠 일정 제공</p>
-                  <a href="https://www.flashscore.co.kr/baseball/south-korea/kbo-2024/fixtures/" target="_blank" class="btn btn-primary w-100">사이트 바로가기</a>
+                  <a href="https://www.koreabaseball.com/Schedule/Schedule.aspx" target="_blank" class="btn btn-primary w-100 mt-auto">사이트 바로가기</a>
                 </div>
               </div>
             </div>
@@ -209,10 +185,12 @@
     <script>
       // 롯데 자이언츠 서울경기 전체 일정 (잠실, 고척)
       const lotteSeoulGames = [
-        { date: '2025-08-15', stadium: '잠실', match: '롯데 vs 두산' },
-        { date: '2025-08-22', stadium: '고척', match: '롯데 vs 키움' },
-        { date: '2025-09-05', stadium: '잠실', match: '롯데 vs LG' },
-        { date: '2025-09-19', stadium: '고척', match: '롯데 vs 키움' }
+  { date: '2025-08-01', time: '18:30', stadium: '고척', match: '롯데 vs 키움' },
+  { date: '2025-08-02', time: '18:00', stadium: '고척', match: '롯데 vs 키움' },
+  { date: '2025-08-03', time: '14:00', stadium: '고척', match: '롯데 vs 키움' },
+  { date: '2025-08-19', time: '18:30', stadium: '잠실', match: '롯데 vs LG' },
+  { date: '2025-08-20', time: '18:30', stadium: '잠실', match: '롯데 vs LG' },
+  { date: '2025-08-21', time: '18:30', stadium: '잠실', match: '롯데 vs LG' }
       ];
 
       // 요일 한글 반환
@@ -230,28 +208,58 @@
         after45.setDate(today.getDate() + 45);
         const filtered = lotteSeoulGames.filter(g => {
           const d = new Date(g.date);
-          return d >= today && d <= after45;
+          // 8월까지만 표시 (KBO 공식 일정 페이지에서 9월은 바로 접근 불가)
+          return d >= today && d <= after45 && (d.getMonth() + 1) === 8;
         });
         const list = document.getElementById('lotte-seoul-list');
         if (filtered.length === 0) {
           list.innerHTML = '<li class="list-group-item">해당 기간 내 서울경기 없음</li>';
         } else {
-          list.innerHTML = filtered.map(g =>
-            `<li class="list-group-item">${g.date} (${getKoreanDay(g.date)}) ${g.stadium}: ${g.match}</li>`
-          ).join('');
+          list.innerHTML = filtered.map(g => {
+            const url = `https://www.koreabaseball.com/Schedule/Schedule.aspx?seriesId=0&date=${g.date}`;
+            return `<a href="${url}" target="_blank" class="list-group-item list-group-item-action">${g.date} (${getKoreanDay(g.date)}) ${g.time} ${g.stadium}: ${g.match}</a>`;
+          }).join('');
         }
       }
+
       renderLotteSeoulGames();
+
+      // 모바일 터치에서도 일정 항목에 호버 효과 적용
+      document.addEventListener('DOMContentLoaded', function() {
+        function addTouchHover(selector) {
+          document.querySelectorAll(selector).forEach(function(el) {
+            el.addEventListener('touchstart', function() {
+              el.classList.add('touch-active');
+            });
+            el.addEventListener('touchend', function() {
+              el.classList.remove('touch-active');
+            });
+            el.addEventListener('touchcancel', function() {
+              el.classList.remove('touch-active');
+            });
+          });
+        }
+        // 일정이 동적으로 렌더링되므로, 렌더 후에도 적용
+        addTouchHover('a.list-group-item-action');
+        // 일정이 갱신될 때마다 다시 적용
+        const observer = new MutationObserver(function() {
+          addTouchHover('a.list-group-item-action');
+        });
+        const list = document.getElementById('lotte-seoul-list');
+        if (list) {
+          observer.observe(list, { childList: true });
+        }
+      });
 
       // 기존 모달 일정 코드 유지
       const schedules = {
         jamsil: [
-          { date: '2025-08-12', match: '두산 vs LG' },
-          { date: '2025-08-13', match: 'LG vs 두산' }
+          { date: '2025-08-12', time: '18:30', match: '두산 vs LG' },
+          { date: '2025-08-13', time: '18:30', match: 'LG vs 두산' }
         ],
         gocheok: [
-          { date: '2025-08-12', match: '키움 vs SSG' },
-          { date: '2025-08-14', match: '키움 vs 한화' }
+          { date: '2025-08-12', time: '18:30', match: '키움 vs SSG' },
+          { date: '2025-08-14', time: '18:30', match: '키움 vs 한화' }
         ]
       };
       const modal = document.getElementById('scheduleModal');
@@ -264,7 +272,7 @@
           body.innerHTML = '<p>일정 정보가 없습니다.</p>';
         } else {
           body.innerHTML = '<ul class="list-group">' +
-            schedule.map(item => `<li class="list-group-item">${item.date} - ${item.match}</li>`).join('') +
+            schedule.map(item => `<li class="list-group-item">${item.date} ${item.time} - ${item.match}</li>`).join('') +
             '</ul>';
         }
       });
