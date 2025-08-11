@@ -4,7 +4,9 @@
   cursor: pointer;
 }
 .card-img-top:hover,
-.card-img-top:active {
+.card-img-top:hover,
+.card-img-top:active,
+.card-img-top.img-hover {
   transform: scale(1.05);
   box-shadow: 0 0 20px 0 rgba(0,0,0,0.2);
   z-index: 2;

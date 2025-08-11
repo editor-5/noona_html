@@ -1,3 +1,15 @@
+// 모바일 터치 시 카드 이미지에 호버 효과 적용
+document.addEventListener('DOMContentLoaded', function() {
+	var imgs = document.querySelectorAll('.card-img-top');
+	imgs.forEach(function(img) {
+		img.addEventListener('touchstart', function() {
+			img.classList.add('img-hover');
+			setTimeout(function() {
+				img.classList.remove('img-hover');
+			}, 500);
+		});
+	});
+});
 // 카드 데이터 예시 (최신 정보와 이미지)
 const cards = [
 	{
